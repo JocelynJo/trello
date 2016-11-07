@@ -1,0 +1,39 @@
+
+#anadir-lista{
+	margin-top:5%;
+}
+.titulo{
+	color:#6DA2CA;
+	background-color:#065197;
+	width: 100%;
+	height: 60px;
+}
+.fa-trello{
+	font-size: 18px;
+	margin-right: 0.5%;
+	color: #6DA2CA;
+}
+.sec-lista{
+	background-color: #0862B8;
+	width: 100%;
+	height: 1000px;
+}
+.anadir-lista-borrar{
+	display:none;
+}
+
+.caja-blanca{
+	margin-top: 5%;
+	width: 55%;
+	height: 80px;
+	background-color: white;
+	padding:2%;
+	border-radius: 10px;
+}
+.guardar{
+	margin-top: 3%;
+}
+.ingresar{
+	margin-bottom: 2%;
+	border-radius: 5px;
+}
