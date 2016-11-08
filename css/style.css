@@ -1,12 +1,14 @@
 
 #anadir-lista{
 	margin-top:5%;
+	color:#6DA2CA;
+
 }
 .titulo{
 	color:#6DA2CA;
 	background-color:#065197;
 	width: 100%;
-	height: 60px;
+	height: 60%;
 }
 .fa-trello{
 	font-size: 18px;
@@ -22,13 +24,28 @@
 	display:none;
 }
 
+
 .caja-blanca{
 	margin-top: 5%;
-	width: 55%;
-	height: 80px;
-	background-color: white;
+	width: 100%;
+	height: 90px;
+	background-color: #DBDDE0;
 	padding:2%;
 	border-radius: 10px;
+}
+.caja-blanca-tarea{
+	margin-top: 5%;
+	width: 20%;
+	height: 90px;
+	background-color: #DBDDE0;
+	padding:1%;
+	border-radius: 10px;
+	color:black;
+	display: inline-block;
+	margin:1%;
+}
+.caja-contiene-tarea{
+	height: 230px;
 }
 .guardar{
 	margin-top: 3%;
@@ -36,4 +53,17 @@
 .ingresar{
 	margin-bottom: 2%;
 	border-radius: 5px;
+}
+.mover{
+	display: block;
+ 	position: absolute;
+  	left: 105%;
+  	top: 8px;
+  	width: 100%;
+}
+.displayB{
+	display:block;
+}
+.borrar{
+	display: none;
 }
