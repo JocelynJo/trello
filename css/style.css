@@ -68,10 +68,12 @@
 }
 .borrar{
 	display: none;
+
 }
 .lista{
 	margin-top: 2%;
 	position: absolute;
 	right: 75%;
-	list-style: none;
+	
+
 }
