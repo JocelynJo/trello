@@ -66,6 +66,7 @@ function agregarLista() {
 		//crea area tarjetas
 		nuevaTarea.addEventListener('click',function(){
 			var divContiene=document.createElement('div');
+			divContiene.setAttribute('id','box-tarjeta')
 			var areaTarj=document.createElement('textarea');
 			areaTarj.cols =30;
 			areaTarj.rows =5;
@@ -79,7 +80,21 @@ function agregarLista() {
 			divNuevo.appendChild(divContiene);
 			divNuevo.classList.toggle('caja-contiene-tarea');
 			nuevaTarea.classList.toggle('borrar');	
+
+			botonGuardar.addEventListener('click',function(){
+				var boxCont=document.getElementById('box-tarjeta');
+				var contenidoTarjeta=document.querySelector('.ingresar').value;
+				var listaHija=document.createElement('h4');
+				var listaTexto=document.createTextNode(contenidoTarjeta);
+				listaHija.classList.add('lista');
+				listaHija.appendChild(listaTexto);
+				boxCont.appendChild(listaHija);
+				//document.getElementById('ingresar-lista').value=" ";
+
+			})
 		})
+
+	
 
 		
  		
