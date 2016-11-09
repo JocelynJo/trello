@@ -1,5 +1,6 @@
 function agregarLista() {
 	//guardar input uno
+
 	var divAna=document.getElementById('anadir-lista');
 	divAna.classList.toggle('anadir-lista-borrar');
 	//conteneder de tareas
@@ -16,6 +17,7 @@ function agregarLista() {
 	inputTexto.setAttribute("placeholder","Añadir una lista");
 	inputTexto.classList.add("ingresar","form-control");
 	inputTexto.setAttribute('id','ingresar-lista');
+	inputTexto.setAttribute('onfocus','foco(this.id)');
 
 	//crear boton guardar
 	var botonAgregar=document.createElement('button');
@@ -30,27 +32,37 @@ function agregarLista() {
 
 	botonAgregar.addEventListener('click', function(){
 		//contiene.classList.toggle('mover');
-		var nuevaLista=document.getElementById('ingresar-lista').value;
-		var textoH3=document.createElement('h5');
- 		var nuevoSpan=document.createTextNode(nuevaLista);
- 		textoH3.appendChild(nuevoSpan)
- 		var nuevaCol=document.getElementById('cont-tarea-new');
- 		nuevaCol.classList.add('text-center');
- 		var divNuevo=document.createElement('div');
- 		var nuevaTarea=document.createElement('a');
- 		nuevaTarea.setAttribute('id','linkTarjeta');
- 		var textoNueva=document.createTextNode("Añadir nueva tarjeta");
- 		nuevaTarea.classList.add("displayB");
- 		divNuevo.classList.add('caja-blanca-tarea','col-md-3','col-xs-3','col-sm-3');
- 		nuevaTarea.appendChild(textoNueva);
- 		divNuevo.appendChild(textoH3);
- 		divNuevo.appendChild(nuevaTarea);
- 		nuevaCol.appendChild(divNuevo);
- 		//nuevaCol.classList.add();
- 		var borrar=document.getElementById('ingresar-lista');
-		var papaBorar=borrar.parentNode;
-		papaBorar.parentNode.removeChild(papaBorar);
-		divAna.classList.toggle('anadir-lista-borrar');
+		var entradaInput=document.getElementById('ingresar-lista').value;
+		if(entradaInput== null|| entradaInput.length==0){
+			inputTexto.setAttribute('onfocus','foco(this.id)');
+			
+		}else{
+
+			var nuevaLista=document.getElementById('ingresar-lista').value;
+			var textoH3=document.createElement('h5');
+ 			var nuevoSpan=document.createTextNode(nuevaLista);
+ 			textoH3.appendChild(nuevoSpan)
+ 			var nuevaCol=document.getElementById('cont-tarea-new');
+ 			nuevaCol.classList.add('text-center');
+ 			var divNuevo=document.createElement('div');
+ 			var nuevaTarea=document.createElement('a');
+ 			nuevaTarea.setAttribute('id','linkTarjeta');
+ 			var textoNueva=document.createTextNode("Añadir nueva tarjeta");
+ 			nuevaTarea.classList.add("displayB");
+ 			divNuevo.classList.add('caja-blanca-tarea','col-md-3','col-xs-3','col-sm-3');
+ 			nuevaTarea.appendChild(textoNueva);
+ 			divNuevo.appendChild(textoH3);
+ 			divNuevo.appendChild(nuevaTarea);
+ 			nuevaCol.appendChild(divNuevo);
+ 			//nuevaCol.classList.add();
+ 			var borrar=document.getElementById('ingresar-lista');
+			var papaBorar=borrar.parentNode;
+			papaBorar.parentNode.removeChild(papaBorar);
+			divAna.classList.toggle('anadir-lista-borrar');
+
+		}
+		
+		
 		//crea area tarjetas
 		nuevaTarea.addEventListener('click',function(){
 			var divContiene=document.createElement('div');
@@ -78,6 +90,11 @@ function agregarLista() {
 
 	
 
+}
+
+function foco(id){
+	var buscaFoco=document.getElementById(id);
+	buscaFoco.classList.add('enfoco');
 }
 
 
